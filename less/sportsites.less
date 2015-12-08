@@ -1,0 +1,226 @@
+@import "normalize-v3.0.3.less";
+
+@font-face {
+  font-family: "sports";
+  src:url("../fonts/sports.eot");
+  src:url("../fonts/sports.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/sports.woff") format("woff"),
+    url("../fonts/sports.ttf") format("truetype"),
+    url("../fonts/sports.svg#sports") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+h1 {
+	border-bottom: 1px solid #eee;
+	padding: 0px 0px 18px;
+	text-align: center;
+}
+
+
+/* label */
+.label-running {
+    background-color: #5cb85c;
+}
+.label-hiking {
+    background-color: #5bc0de;
+}
+.label-bike {
+    background-color: #f0ad4e;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+
+/* thumbnail1 */
+.thumbnail-listing {
+	margin: 0 -15px;
+}
+.thumbnail1-wrap {
+	display:inline-block;
+	width:360px;
+	margin:10px 15px;
+	vertical-align:top;
+}
+.thumbnail1 {
+	border:3px solid transparent;
+	background-color:#fff;
+	border-radius:6px;
+	transition:all 150ms;
+	position: relative;
+}
+
+
+.thumbnail1:hover {
+	border-color:rgba(0,0,0,0.2);
+	border-radius:8px;
+	box-shadow:0 2px 5px 0 rgba(0,0,0,0.2);
+}
+.thumbnail1.running:hover {
+	border-color:#5cb85c;
+}
+.thumbnail1.bike:hover {
+	border-color:#f0ad4e;
+}
+.thumbnail1.hiking:hover {
+	border-color:#5bc0de;
+}
+
+
+
+.thumbnail1:after {
+	border-radius: 6px;
+	color: #fff;
+	font-family: "sports";
+	left: 15px;
+	position: absolute;
+	top: 15px;
+	padding: 6px;
+	font-size: 20px;
+	opacity: 0.6;
+	transition:all 150ms;
+}
+.thumbnail1:hover:after {
+	opacity: 1;	
+}
+.thumbnail1.running:after {
+	background-color:#5cb85c;
+	content: "c";
+}
+.thumbnail1.bike:after {
+	background-color:#f0ad4e;
+	content: "a";
+}
+.thumbnail1.hiking:after {
+	background-color:#5bc0de;
+	content: "b";
+}
+
+
+
+
+
+
+
+
+
+
+.thumbnail1 .thumbnail1-visual {
+	box-shadow:0 1px 4px 0 rgba(0,0,0,0.3);
+	border-radius:6px;
+}
+
+
+.thumb-block {
+	display: block;
+}
+.thumb-screenshot {
+	border-radius:6px 6px 0 0;
+	width: 100%;
+	height: auto;
+}
+
+.thumb-title {
+	margin: 0;
+}
+.thumb-title .thumbnail1-body {
+	padding:15px 25px;
+}
+
+
+.thumbnail1-body {
+	display:block;
+	padding:0 25px 15px;
+	color:#444;
+	outline:none
+}
+
+
+
+
+/*.thumbnail1 .item-cafe-block {
+	margin:0
+}
+
+.thumbnail1 .item-cafe-logo {
+	margin:20px auto 10px;
+	display:block
+}
+.thumbnail1 .item-cafe-website {
+	border-top:1px solid #ffe866;
+	background-color:rgba(255,232,102,0.25);
+	border-radius:0 0 6px 6px
+}*/
+
+
+
+/* checkbox */
+.thumbnail-filter {
+	text-align: center;
+	margin: 0 0 18px;
+}
+.stylish-checkbox {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  vertical-align: top;
+}
+.stylish-checkbox label {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+}
+.stylish-checkbox label:before {
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 2px rgba(155, 155, 160, 0.4);
+          box-shadow: inset 0 0 2px rgba(155, 155, 160, 0.4);
+  color: #fff;
+  content: '+';
+  cursor: pointer;
+  font-family: 'arbeidsliv-font' !important;
+  font-size: 0.875em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding: 3px 5px;
+  margin-right: 5px;
+}
+.stylish-checkbox input[type=checkbox] {
+  display: none;
+  color: #fff;
+}
+.stylish-checkbox.running input[type=checkbox]:checked + label:before {
+  background-color: #5cb85c;
+}
+.stylish-checkbox.bike input[type=checkbox]:checked + label:before {
+  background-color: #f0ad4e;
+}
+.stylish-checkbox.hiking input[type=checkbox]:checked + label:before {
+  background-color: #5bc0de;
+}
